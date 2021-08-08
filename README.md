@@ -3,7 +3,7 @@
 This code is for finance metrics, you will be able to calculate the Market Value, Average Daily Return, Portfolio Daily Return, Portfolio Annual Return, Portfolio Daily Risk, Portfolio Annual Risk, Portfolio Beta, Market Return, and the CAPM for the assets or the portfolio.
 
 First, you need to install de yahoo finance library (https://pypi.org/project/yfinance/).
-With this lib, you will be able to download historical data from different stocks around the world. If you want to know want to know more about it, read the repository.
+With this lib, you will be able to download historical data from different stocks around the world. If you want to know want to know more about it, read the documentation.
 Another lib that we will use is datatime.
 Pandas will bring us the facility for the data managment, that is why we use de DataFrames in the code.
 
