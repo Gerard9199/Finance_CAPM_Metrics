@@ -29,7 +29,8 @@ start = today.replace(year=today.year - Year)
 
 prices = yf.download(portfolio, start = start, end = today, interval="1d" )['Adj Close']
 prices[composite] = yf.download(composite, start = start, end = today, interval="1d" )['Adj Close']
-prices=prices.fillna(method='bfill')
+prices = prices.fillna(method='bfill')
+prices = prices.fillna(prices.mean())
 net_returns = prices.pct_change()
 Last_price = yf.download(portfolio, today)['Adj Close']
 
