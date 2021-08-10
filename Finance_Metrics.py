@@ -44,7 +44,7 @@ Portfolio_Annual_Return = ((1 + Portfolio_Daily_Return)**252)-1
 Cov_Matrix = (net_returns[portfolio].cov()[portfolio])
 Portfolio_Daily_Risk = (np.sqrt(np.matmul(Ponderation,np.matmul(Cov_Matrix,Ponderation.T)))).to_numpy()
 Portfolio_Annual_Risk = Portfolio_Daily_Risk * np.sqrt(252)
-Stock_Beta = pd.DataFrame(beta_calculator(net_returns)).drop(composite,axis=0)
+Stock_Beta = (beta_calculator(net_returns)).drop(composite,axis=0)
 Portfolio_Beta = np.dot(Stock_Beta.T,Ponderation.T)
 Market_Return = ((1 + Daily_Composite_Return)**252)-1
 CAPM = Risk_Free_Rate + Stock_Beta * (Market_Return - Risk_Free_Rate)
